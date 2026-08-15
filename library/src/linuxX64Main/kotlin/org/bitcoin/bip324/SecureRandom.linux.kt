@@ -29,4 +29,5 @@ internal actual fun fillSecureRandom(bytes: ByteArray) {
     }
 }
 
+@OptIn(ExperimentalForeignApi::class)
 internal actual fun currentEpochSeconds(): Long = time(null)
