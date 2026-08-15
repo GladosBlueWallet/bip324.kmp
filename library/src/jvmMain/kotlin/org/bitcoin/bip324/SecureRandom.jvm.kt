@@ -1,0 +1,11 @@
+package org.bitcoin.bip324
+
+import java.security.SecureRandom
+
+private val rng = SecureRandom()
+
+internal actual fun fillSecureRandom(bytes: ByteArray) {
+    rng.nextBytes(bytes)
+}
+
+internal actual fun currentEpochSeconds(): Long = System.currentTimeMillis() / 1_000
