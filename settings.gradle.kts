@@ -14,4 +14,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "bip324"
-include(":library")
+include(":bip324")
+project(":bip324").projectDir = file("library")
