@@ -16,19 +16,19 @@ Primary targets are **Android** and **iOS**. JVM and linuxX64 are extra.
 
 ```kotlin
 commonMain.dependencies {
-    implementation("org.bitcoin.kmp:bip324:0.0.1")
+    implementation("io.bluewallet:bip324:0.0.1")
 }
 ```
 
 ## Quick usage
 
 ```kotlin
-import org.bitcoin.bip324.Message
-import org.bitcoin.bip324.Networks
-import org.bitcoin.bip324.Protocol
-import org.bitcoin.bip324.ProtocolOptions
-import org.bitcoin.bip324.Role
-import org.bitcoin.bip324.pairedByteDuplexes
+import io.bluewallet.bip324.Message
+import io.bluewallet.bip324.Networks
+import io.bluewallet.bip324.Protocol
+import io.bluewallet.bip324.ProtocolOptions
+import io.bluewallet.bip324.Role
+import io.bluewallet.bip324.pairedByteDuplexes
 
 val (a, b) = pairedByteDuplexes()
 val alice = Protocol.connect(a, ProtocolOptions(Role.Initiator, Networks.regtest))
@@ -56,7 +56,7 @@ the consumed prefix as a structured `V1HandshakeResult`.
 ## Layout
 
 ```
-library/src/commonMain/kotlin/org/bitcoin/bip324/
+library/src/commonMain/kotlin/io/bluewallet/bip324/
   crypto/      ElligatorSwift, HKDF, FSChaCha20*
   handshake/   BIP-324 handshake
   packet/      Packet encode/decode
