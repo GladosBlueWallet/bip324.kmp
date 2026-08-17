@@ -16,7 +16,7 @@ Primary targets are **Android** and **iOS**. JVM and linuxX64 are extra.
 
 ```kotlin
 commonMain.dependencies {
-    implementation("org.bitcoin.kmp:bip324:0.0.1")
+    implementation("io.bluewallet:bip324:0.0.1")
 }
 ```
 
